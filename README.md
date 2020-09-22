@@ -11,7 +11,7 @@ poetry run hypercorn run:app
 
 ## Brief Documentation
 
-### `/school`
+### `/schools`
 
 Returns an array (list) with schools in JSON
 
