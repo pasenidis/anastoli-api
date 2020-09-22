@@ -13,6 +13,7 @@ from logging import Formatter
 
 from api.errors import APIError
 from api.blueprints import (
+    schools,
     health
 )
 
@@ -40,7 +41,7 @@ class ColoredHandler(logbook.StreamHandler):
 handler = ColoredHandler(sys.stdout, level=logbook.INFO)
 handler.push_application()
 
-log = logbook.Logger("quart_boilerplate")
+log = logbook.Logger("anastoli-api")
 logbook.compat.redirect_logging()
 
 app = Quart(__name__)
@@ -54,6 +55,7 @@ if is_debug:
     log.debug("Debug mode is enabled")
 
 blueprints = {
+    schools: "/schools",
     health: "/health"
 }
 

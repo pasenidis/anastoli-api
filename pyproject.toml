@@ -12,6 +12,9 @@ hypercorn = "^0.10.2"
 quart_openapi = "^1.6.0"
 databases = "^0.3.2"
 termcolor = "^1.1.0"
+bs4 = "^0.0.1"
+requests = "^2.24.0"
+dataclasses-json = "^0.5.2"
 
 [tool.poetry.dev-dependencies]
 
