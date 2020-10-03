@@ -11,15 +11,15 @@ poetry run hypercorn run:app
 
 ## Brief Documentation
 
-### `/schools`
+### `GET /schools`
 
 Returns an array (list) with schools in JSON
 
-### `/schools/search/$name`
+### `GET /schools/search/$name`
 
 Searches for the right school and returns the results
 
-### `/health`
+### `GET /health`
 
 Check if the API works, should return the following:
 
