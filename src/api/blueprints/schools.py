@@ -9,6 +9,7 @@ bp = Blueprint("schools", __name__)
 
 
 @bp.route('/')
+@bp.route('/search')
 async def schools():
     t = total_schools()
     return jsonify({"schools": t[1]})
