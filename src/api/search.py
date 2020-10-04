@@ -2,11 +2,10 @@ import re
 
 def research(school, total):
     """Search based on regular expressions"""
-    match = None
     for _ in total:
-        if _['name'] == school or _['name'].lower() == school.lower() or _['name'].upper() == school.upper():
-            match = _
+        regex = fr"^{school}"
+        if re.match(regex, _['name'], flags=re.IGNORECASE):
+            return _
             break
         else:
             continue
-    return match
