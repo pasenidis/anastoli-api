@@ -1,11 +1,11 @@
 import re
 
 def research(school, total):
-    """Search based on regular expressions"""
-    for _ in total:
-        regex = fr"^{school}"
-        if re.match(regex, _['name'], flags=re.IGNORECASE):
-            return _
-            break
-        else:
-            continue
+    """Search algorithm"""
+    return contains(total, lambda x: school.lower() in x['name'].lower())
+
+def contains(list, filter):
+    for x in list:
+        if filter(x):
+            return x
+    return False
